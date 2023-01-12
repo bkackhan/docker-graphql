@@ -28,8 +28,10 @@ jobs:
     - name: Build Docker image
       run: |
         docker build -t bkackhan/docker-graphql:0.0.2 .
+        docker build -t bkackhan/docker-graphql:latest .
     - name: Push docker image
       run: |
         docker push bkackhan/docker-graphql:0.0.2
+        docker push bkackhan/docker-graphql:latest
 #     - name: Build the Docker image
 #       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
